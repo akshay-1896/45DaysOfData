@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Customer Reviews</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+
+        @keyframes slide {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .abstract-bg {
+            /* background: radial-gradient(circle, #ff7e5f, #feb47b); */
+            /* background: repeating-gradient(135deg, #ffcc33, #ff66cc, #3366ff); */
+
+            background: linear-gradient(45deg, rgb(255, 0, 150), rgb(255, 100, 0), rgb(0, 204, 255), rgb(0, 153, 51));
+            background-size: 200% 200%;
+            animation: slide 10s infinite;
+
+            color: white;
+            padding: 20px;
+        }
+
+        .navbar {
+            margin-bottom: 50px;
+        }
+
+        .form-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            margin-bottom: 20px;
+        }
+
+        .centered-content {
+            display: flex;
+            width: 50%;
+            margin: 0 auto;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :target {
+            scroll-margin-top: -20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Flight Reviews</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#review-form">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="abstract-bg text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Welcome to Flight Reviews</h1>
+            <p class="lead">Share your flight experience with us</p>
+        </div>
+    </header>
+
+    <!-- Review Form Section -->
+    <section id="review-form" class="py-5">
+        <div class="container">
+            <div class="form-section">
+                <h2 class="form-title text-center">Customer Review Form</h2>
+                <form>
+                    <div class="form-group centered-content">
+                        <label for="age">Age</label>
+                        <input type="text" id="age" class="form-control" , placeholder="Your Age">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="distance">Flight Distance</label>
+                            <input type="text" class="form-control" id="distance"
+                                placeholder="Enter Flight Distance (in kms)">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="seatClass">Gender</label>
+                            <select id="seatClass" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="seatClass">Customer Type</label>
+                            <select id="seatClass" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Loyal</option>
+                                <option>Disloyal</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="seatClass">Type of Travel</label>
+                            <select id="seatClass" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Personal</option>
+                                <option>Business</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="departure">Departure Delay</label>
+                            <input type="text" class="form-control" id="departure"
+                                placeholder="Departure Delay (in min)">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="arrival">Arrival Delay</label>
+                            <input type="text" class="form-control" id="arrival" placeholder="Arrival Delay (in min)">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="seatClass">Seat Class</label>
+                            <select id="seatClass" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Eco Plus</option>
+                                <option>Eco</option>
+                                <option>Business</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="rating">Inflight Entertainment</label>
+                            <select id="rating" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="rating">Baggage Handling</label>
+                            <select id="rating" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="rating">Cleanliness</label>
+                            <select id="rating" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block bt2" style="margin-top:30px;">Submit Review</button>
+
+            </form>
+        </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 abstract-bg">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <div class="row mt-4">
+                <div class="col-md-6 offset-md-3">
+                    <form>
+                        <div class="form-group">
+                            <label for="contactName">Name</label>
+                            <input type="text" class="form-control" id="contactName" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" class="form-control" id="contactEmail" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="4"
+                                placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Flight Reviews. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

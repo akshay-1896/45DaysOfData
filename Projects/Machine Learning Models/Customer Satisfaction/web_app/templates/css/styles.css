@@ -1,0 +1,121 @@
+/* Custom CSS */
+
+.hero-section {
+    background: url('../images/bg4.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Add animations */
+/* @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-section h1, .hero-section p {
+    animation: fadeIn 3s ease-in-out;
+} */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero-section h1, .hero-section p {
+    animation:fadeIn 3s ease-in-out;
+}
+
+.hero-section h1 {
+    font-size: 80px;
+}
+
+.hero-section p {
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 20px; /* Adjust to desired roundness */
+    overflow: hidden;
+    height: 100%;
+}
+
+.card-img-top {
+    border-top-left-radius: 20px; /* Match the card border-radius */
+    border-top-right-radius: 20px; /* Match the card border-radius */
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center; /* Optional: Center align the text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title{
+    color: black;
+}
+
+.card-text{
+    color: black;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.6s;
+    /* border: 8px solid #ffc400; Blue border */
+}
+
+.text-center{
+    margin-bottom: 50px;
+}
+
+.btn{
+    border-radius: 20px;
+    align-self: center;
+}
+
+.btn-custom-width{
+    width: 150px;
+}
+
+@keyframes slide {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.bg-light{
+    background: linear-gradient(45deg, rgb(129, 81, 109), rgb(95, 79, 124), rgb(0, 132, 255), rgb(5, 241, 84));
+    background-size: 200% 200%;
+    animation: slide 10s infinite; 
+
+    color: white;
+    padding: 20px;
+
+}
+/* Additional custom styles */
+
+.navbar img{
+    width: 30px;
+    height: 30px;;
+    margin-right: 10px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
